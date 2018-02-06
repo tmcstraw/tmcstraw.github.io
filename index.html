@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Snowpack Viewer</title>
+</head>
+
+<body>
+<h1>Snowpack Viewer</h1>
+
+<br />
+<p> Snowpack Viewer is a decision support tool for engineers that uses various Snotel data stations along the wasatch front along with MODIS satellite data in order to calculate the volume of snowpack that exists in the wasatch mountain range.  Through a form of kriging interpolation and other geoprocessing tools, users can view the snowpack data in order to make educated decisions to prepare for spring runoff events, and avoid potential flooding in years when the snowfall is above average.<p/>
+<br />
+<form action="/action_page.php">
+  <select name="location" size="5">
+    <option value="utah_valley">Utah Valley</option>
+    <option value="salt_lake_valley">Salt Lake Valley</option>
+    <option value="logan_area">Logan Area</option>
+    <option value="ogden">Ogden Area</option>
+  </select>
+  <br>
+  <input type="submit">
+</form>
+<br />
+<div id="map" style="width:400px;height:400px;background:yellow"></div>
+
+<script>
+function myMap() {
+var mapOptions = {
+    center: new google.maps.LatLng(40.5, -111.6585),
+    zoom: 8,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcOAeXAT11joX3Vs0XwY9D6CZ7fi57jfs&callback=myMap"></script>
+<br />
+<button type="button" onclick="alert('Travis McStraw, Jason Beisinger, Jorge Sanchez, BYU')">Contact Us</button>
+</body>
+</html>
