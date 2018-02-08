@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Length Unit Converter</title>
+</head>
+
+<body style="background-color:powderblue">
+<h1 style="text-align:center; font-style:italic; color:navy; background-color:powderblue">Travis' Not So Fancy <br>Length Unit Converter</h1>
+<br />
+<br />
+<form style="text-align:center;">
+  Input Value:<br>
+  <input id= "input" type="number" name="input"><br>
+<br />
+<p style="text-align:;"> Input Units   |   Output Units </p>
+<form style="text-align:center;" action="/action_page.php">
+  <select id="input units">
+    <option value="milimeters">milimeters</option>
+    <option value="centimeters">centimeters</option>
+    <option value="meters">meters</option>
+    <option value="kilometers">kilometers</option>
+    <option value="inches">inches</option>
+    <option value="feet">feet</option>
+    <option value="yards">yards</option>
+    <option value="miles">miles</option>
+  </select>
+  
+  <select id="output units">
+    <option value="milimeters">milimeters</option>
+    <option value="centimeters">centimeters</option>
+    <option value="meters">meters</option>
+    <option value="kilometers">kilometers</option>
+    <option value="inches">inches</option>
+    <option value="feet">feet</option>
+    <option value="yards">yards</option>
+    <option value="miles">miles</option>
+  </select>
+  <br><br>
+  <input type="button" onclick="UnitConverter()" value="Submit">
+  
+ <br />
+ <br />
+ <p style="background-color:lightgreen">Answer:     <span id ="answer"></span></p>
+  	<script>
+	
+	function UnitConverter() {
+	var inu = document.getElementById("input units").value;
+	var outu = document.getElementById("output units").value;
+	var valnum = parseFloat(document.getElementById("input").value);
+	
+	  if (inu == "milimeters") {
+		  if (outu == "milimeters") {
+			  document.getElementById("answer").innerHTML = valnum;
+		  } else if (outu == "centimeters") {
+			  document.getElementById("answer").innerHTML = valnum/10;
+		  } else if (outu == "meters") {
+			  document.getElementById("answer").innerHTML = valnum / 1000;
+		  } else if (outu == "kilometers") {
+			  document.getElementById("answer").innerHTML = valnum / 1000000;
+		  } else if (outu == "inches") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0394;
+		  } else if (outu == "feet") {
+			  document.getElementById("answer").innerHTML = valnum * 0.00328084;
+		  } else if (outu == "yards") {
+			  document.getElementById("answer").innerHTML = valnum * 0.00109361;
+		  } else if (outu == "miles") {
+			  document.getElementById("answer").innerHTML = valnum * 0.000000621371;
+		  } else {
+			  document.getElementById("answer").innerHTML = "Error";
+		  }
+		  
+	  } else if (inu == "centimeters") {
+		  if (outu == "centimeters") {
+			  document.getElementById("answer").innerHTML = valnum;
+		  } else if (outu == "milimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 10;
+		  } else if (outu == "meters") {
+			  document.getElementById("answer").innerHTML = valnum / 100;
+		  } else if (outu == "kilometers") {
+			  document.getElementById("answer").innerHTML = valnum / 100000;
+		  } else if (outu == "inches") {
+			  document.getElementById("answer").innerHTML = valnum * 0.393701;
+		  } else if (outu == "feet") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0328084;
+		  } else if (outu == "yards") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0109361;
+		  } else if (outu == "miles") {
+			  document.getElementById("answer").innerHTML = valnum * 0.00000621371;
+		  } else {
+			  document.getElementById("answer").innerHTML = "Error";
+		  }
+	  } else if (inu == "meters") {
+		  if (outu == "meters") {
+			  document.getElementById("answer").innerHTML = valnum;
+		  } else if (outu == "milimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 1000;
+		  } else if (outu == "centimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 100;
+		  } else if (outu == "kilometers") {
+			  document.getElementById("answer").innerHTML = valnum / 1000;
+		  } else if (outu == "inches") {
+			  document.getElementById("answer").innerHTML = valnum * 39.3701;
+		  } else if (outu == "feet") {
+			  document.getElementById("answer").innerHTML = valnum * 3.28084;
+		  } else if (outu == "yards") {
+			  document.getElementById("answer").innerHTML = valnum * 1.09361;
+		  } else if (outu == "miles") {
+			  document.getElementById("answer").innerHTML = valnum * 0.000621371;
+		  } else {
+			  document.getElementById("answer").innerHTML = "Error";
+		  }
+	  } else if (inu == "kilometers") {
+		  if (outu == "kilometers") {
+			  document.getElementById("answer").innerHTML = valnum;
+		  } else if (outu == "milimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 1000000;
+		  } else if (outu == "meters") {
+			  document.getElementById("answer").innerHTML = valnum * 1000;
+		  } else if (outu == "centimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 100000;
+		  } else if (outu == "inches") {
+			  document.getElementById("answer").innerHTML = valnum * 39370.079;
+		  } else if (outu == "feet") {
+			  document.getElementById("answer").innerHTML = valnum * 3280.84;
+		  } else if (outu == "yards") {
+			  document.getElementById("answer").innerHTML = valnum * 1093.613;
+		  } else if (outu == "miles") {
+			  document.getElementById("answer").innerHTML = valnum * 0.621371;
+		  } else {
+			  document.getElementById("answer").innerHTML = "Error";
+		  }
+	  } else if (inu == "inches") {
+		  if (outu == "inches") {
+			  document.getElementById("answer").innerHTML = valnum;
+		  } else if (outu == "milimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 25.4;
+		  } else if (outu == "meters") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0254;
+		  } else if (outu == "kilometers") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0000254;
+		  } else if (outu == "centimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 2.54;
+		  } else if (outu == "feet") {
+			  document.getElementById("answer").innerHTML = valnum * 0.083333;
+		  } else if (outu == "yards") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0277778;
+		  } else if (outu == "miles") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0000157828;
+		  } else {
+			  document.getElementById("answer").innerHTML = "Error";
+		  }
+	  } else if (inu == "feet") {
+		  if (outu == "feet") {
+			  document.getElementById("answer").innerHTML = valnum;
+		  } else if (outu == "milimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 304.8;
+		  } else if (outu == "meters") {
+			  document.getElementById("answer").innerHTML = valnum * 0.3048;
+		  } else if (outu == "kilometers") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0003048;
+		  } else if (outu == "inches") {
+			  document.getElementById("answer").innerHTML = valnum * 12;
+		  } else if (outu == "centimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 30.48;
+		  } else if (outu == "yards") {
+			  document.getElementById("answer").innerHTML = valnum * 0.3333333;
+		  } else if (outu == "miles") {
+			  document.getElementById("answer").innerHTML = valnum * 0.000189394;
+		  } else {
+			  document.getElementById("answer").innerHTML = "Error";
+		  }
+	  } else if (inu == "yards") {
+		  if (outu == "yards") {
+			  document.getElementById("answer").innerHTML = valnum;
+		  } else if (outu == "milimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 914.4;
+		  } else if (outu == "meters") {
+			  document.getElementById("answer").innerHTML = valnum * 0.9144;
+		  } else if (outu == "kilometers") {
+			  document.getElementById("answer").innerHTML = valnum * 0.0009144;
+		  } else if (outu == "inches") {
+			  document.getElementById("answer").innerHTML = valnum * 36;
+		  } else if (outu == "feet") {
+			  document.getElementById("answer").innerHTML = valnum * 3;
+		  } else if (outu == "centimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 91.44;
+		  } else if (outu == "miles") {
+			  document.getElementById("answer").innerHTML = valnum * 0.00056818;
+		  } else {
+			  document.getElementById("answer").innerHTML = "Error";
+		  }
+	  } else if (inu == "miles") {
+		  if (outu == "miles") {
+			  document.getElementById("answer").innerHTML = valnum;
+		  } else if (outu == "milimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 1609344;
+		  } else if (outu == "meters") {
+			  document.getElementById("answer").innerHTML = valnum * 1609.344;
+		  } else if (outu == "kilometers") {
+			  document.getElementById("answer").innerHTML = valnum * 1.609344;
+		  } else if (outu == "inches") {
+			  document.getElementById("answer").innerHTML = valnum * 63360;
+		  } else if (outu == "feet") {
+			  document.getElementById("answer").innerHTML = valnum * 5280;
+		  } else if (outu == "yards") {
+			  document.getElementById("answer").innerHTML = valnum * 1760;
+		  } else if (outu == "centimeters") {
+			  document.getElementById("answer").innerHTML = valnum * 160934.4;
+		  } else {
+			  document.getElementById("answer").innerHTML = "Error";
+		  }
+	  
+	  } else {
+		  document.getElementById("answer").innerHTML = "error";
+	  }
+	}
+	</script>
+    
+	</form>
+</body>
+</html>
