@@ -34,7 +34,10 @@ require([
 
         title: "Snotel Stations",
 
-        content: "<p>Station Name: <b>{NAME}</b></p>"
+        content: "<p>Station Name: <b>{NAME}</b></p>" +
+			"<ul><li>Latitude: {LATITUDE}<li>" +
+			"Longitude: {LONGITUDE}" +
+			"<li>Network: {NETWORK}<li><ul>"
 	};
 	
 	var utah_dem_Lyr = new MapImageLayer({
@@ -123,3 +126,4 @@ require([
 <button style="background-color:powderblue;" type="button" onclick="alert('Travis McStraw, Jason Beisinger, Jorge Sanchez, BYU')">Contact Us</button>
 </body>
 </html>
+
